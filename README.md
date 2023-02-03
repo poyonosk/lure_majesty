@@ -1,4 +1,4 @@
-# サイト名：LureMajesty
+# LureMajesty
 
 ## サイト概要
 先駆者の釣果を参考に最速のルアー選びを！
