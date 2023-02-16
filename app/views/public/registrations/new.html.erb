@@ -1,29 +1,41 @@
-<h2>Sign up</h2>
+<div class="container-fluid registration py-5">
+  
+  <div class="row">
+    <div class="offset-4 text-center">
+      <h2 class="container mt-5 pl-4">新規会員登録</h2>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "public/shared/error_messages", resource: resource %>
+    <div class="row ml-5 pl-5 mt-3 w-75">
+    <%= form_with model: resource, url: registration_path(resource_name), class:"w-100" do |f| %>
+      <%= render "public/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="row form-group">
+        <div class="col-sm-3 offset-1">メールアドレス</div>
+        <div class="col-sm-8"><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"sample@example.com", size: 30 %></div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <div class="row form-group">
+        <div class="col-sm-3 offset-1">パスワード</div>
+        <div class="col-sm-8"><%= f.password_field :password, autocomplete: "new-password", placeholder:"半角英数６文字以上", size: 30 %></div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="row form-group">
+        <div class="col-sm-3 offset-1">パスワード 確認用</div>
+        <div class="col-sm-8"><%= f.password_field :password_confirmation, autocomplete: "new-password", size: 30 %></div>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="row">
+        <%= f.submit "Sign up", class: "btn btn-md btn-danger mx-auto" %>
+      </div>
+      
+      <div class="offset-4">
+        <h3 class="container mt-5 pl-4">既に登録済みの方</h3>
+      </div>
 
-<%= render "public/shared/links" %>
+      <div class="row">
+        <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-sm btn-outline-danger mx-auto" %>
+      </div>
+    <% end %>
+    </div>
+
+</div>

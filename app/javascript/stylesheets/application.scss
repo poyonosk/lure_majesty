@@ -1,0 +1,44 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  background-image: url("../images/tsuri.jpg");
+  height: 600px;
+  width: 100%;
+  background-size:cover;
+  font-size: 20px;
+  color: #fff;
+}
+
+.start {
+  height: 300px;
+  text-align: center;
+}
+
+.logo {
+  height: 15%;
+  width: 15%;
+}
+
+.registration {
+  background-image: url("../images/tsuri.jpg");
+  height: 600px;
+  width: 100%;
+  background-size:cover;
+  font-size: 20px;
+  color: #fff;
+}
+
+.session {
+  background-image: url("../images/tsuri.jpg");
+  height: 600px;
+  width: 100%;
+  background-size:cover;
+  font-size: 20px;
+  color: #fff;
+}
